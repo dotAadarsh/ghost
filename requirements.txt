@@ -1,17 +1,5 @@
 cohere==5.3.3
 google-generativeai==0.5.2
-jsonpatch==1.33
-langchain==0.1.16
-langchain-community==0.0.34
-langchain-core==0.1.46
-langchain-text-splitters==0.0.1
-langsmith==0.1.51
 llmsherpa==0.1.4
-numpy==1.26.4
-pandas==2.2.2
 pangea-sdk==3.8.0b2
-python-dotenv==1.0.1
 streamlit==1.33.0
-streamlit-pdf-viewer==0.0.10
-tiktoken==0.6.0
-tokenizers==0.19.1
