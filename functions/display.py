@@ -1,7 +1,7 @@
 import io
 import base64
 import requests
-from streamlit import st
+import streamlit as st
 
 def display_pdf(url):
   """Downloads and displays a PDF from a URL in a Streamlit app.
