@@ -19,7 +19,7 @@ st.set_page_config(
         'About': "A secure AI powered chatbot powered by Pangea"
     })
 
-st.title("GHOST")
+st.title("Ghost")
 st.caption("Where Privacy Meets Intelligence!")
 
 
