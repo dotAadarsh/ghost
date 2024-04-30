@@ -49,7 +49,7 @@ def main():
             with st.spinner("Sanitizing the uploaded file..."):
                 sanitized_file = sanitize_file(uploaded_file, save_path)
                 st.session_state["sanitized_file"] = sanitized_file  # Store path
-            st.sidebar.markdown(f"['Download Sanitized File']({sanitized_file})")
+            display_pdf(sanitized_file)
 
     # React to user input
     if prompt := st.chat_input("Wassup?"):
