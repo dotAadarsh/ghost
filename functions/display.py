@@ -14,12 +14,15 @@ def display_pdf(url):
     # Read PDF content as bytes
     pdf_bytes = io.BytesIO(response.content)
 
-    # Encode bytes in base64
-    base64_pdf = base64.b64encode(pdf_bytes.getvalue()).decode("utf-8")
+    # # Encode bytes in base64
+    # base64_pdf = base64.b64encode(pdf_bytes.getvalue()).decode("utf-8")
 
-    # Display PDF using iframe tag
-    html = F"""
-        <iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="400"></iframe>
-    """
-    with st.expander("Sanitized File"):
-        st.markdown(html, unsafe_allow_html=True)
+    # # Display PDF using iframe tag
+    # html = F"""
+    #     <iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="400"></iframe>
+    # """
+    with st.sidebar.expander("Sanitized File", expanded=True):
+        st.download_button(label="Download",
+                            data=pdf_bytes,
+                            file_name="sanitized_file.pdf",
+                            mime='application/octet-stream')
