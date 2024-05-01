@@ -76,7 +76,7 @@ def sanitize_file(uploaded_file, save_path):
 
             data = {"transfer_method": "dest-url", "id": f"{file_share_id}"} 
 
-            share_response = requests.post(share_url, headers=headers, data=json.dumps(data), verify=False)
+            share_response = requests.post(share_url, headers=headers, json=data)
 
             # Handle the response based on your needs
             if share_response.status_code == 200:
